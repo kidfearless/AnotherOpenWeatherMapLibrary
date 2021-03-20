@@ -23,7 +23,8 @@ namespace AnotherOpenWeatherMapLibrary
 			var url = $"https://api.openweathermap.org/data/{APIVersion}/weather?" + 
 				location + 
 				$"&units={units.ToString().ToLower()}" +
-				$"&lang={languageCode.ToString().ToLower()}";
+				$"&lang={languageCode.ToString().ToLower()}" +
+				$"&appid={APIKey}";
 			return GetResponse<CurrentWeather>(url);
 		}
 
